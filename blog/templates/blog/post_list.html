@@ -3,15 +3,17 @@
 		<title>Super blog</title>
 	</head>
 	<body>
-		<div>
-			<h1><a href="">Rola kaczki w programowaniu</a></h1>
-			<p><em>Kaczka jest ważna i bez niej to ani rusz</em></p>
-			<br />
-			<ul><li>KACZKA</li><li>KOT</li></ul>
-		</div>
-		<div>
-			<h2><a href="">Rola babeczki w warsztatach</a></h2>
-		</div>
+<div>
+	<h1><a href="/">Django Girls Blog</a></h1>
+</div>
+
+{% for post in posts %}
+	<div>
+		<p>published: {{ post.published_date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+    </div>
+{% endfor %}
     	
     </body>
     
